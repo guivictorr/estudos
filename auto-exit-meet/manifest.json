@@ -1,0 +1,17 @@
+{
+    "manifest_version":2,
+    "name":"Auto Exit",
+    "description":"Auto exit from a meeting using members count",
+    "version":"1.0",
+    "content_scripts":[
+        {
+            "matches":["https://meet.google.com/*"],
+            "css": ["style.css"],
+            "js": ["content.js"],
+            "run_at": "document_end"
+        }
+    ],
+    "permissions": ["webRequest",
+        "webRequestBlocking",
+        "https://meet.google.com/*"]
+}

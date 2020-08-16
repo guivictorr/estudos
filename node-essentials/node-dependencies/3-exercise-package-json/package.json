@@ -1,0 +1,14 @@
+{
+  "name": "Tailwind-trader-API",
+  "version": "1.0.0",
+  "description": "An HTTP API that will fetch items from Tailwind Traders database",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "start": "node ./src/index.js"
+  },
+  "keywords": ["api", "database"],
+  "author": "Sam",
+  "license": "ISC"
+}
