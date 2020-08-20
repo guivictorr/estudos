@@ -22,8 +22,8 @@ class Pessoa extends Caracteristicas {
   getCpf(cpf: string, nome: string){
     if(this.cpf === cpf && this.nome === nome){
       console.log(`CPF: ${this.cpf} / NOME: ${this.nome}`)
-    }else{
-      console.error('Você não é você')
+    } else {
+      throw 'Você não é você'
     }
   }
 }
@@ -31,6 +31,11 @@ class Pessoa extends Caracteristicas {
 const pessoa = new Pessoa('Azul', 'Marrom', 'Masculino');
 pessoa.setCpf('000.000.000-00', 'Guilherme Victor')
 
-pessoa.getCpf('000.000.000-00', 'Guilherme Victor')
+try{
+  pessoa.getCpf('111.111.111-11', 'Outra pessoa')
+}
+catch(err){
+  console.error(err)
+}
 
-console.log(pessoa)
+

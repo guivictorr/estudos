@@ -34,12 +34,16 @@ var Pessoa = /** @class */ (function (_super) {
             console.log("CPF: " + this.cpf + " / NOME: " + this.nome);
         }
         else {
-            console.error('Você não é você');
+            throw 'Você não é você';
         }
     };
     return Pessoa;
 }(Caracteristicas));
 var pessoa = new Pessoa('Azul', 'Marrom', 'Masculino');
 pessoa.setCpf('000.000.000-00', 'Guilherme Victor');
-pessoa.getCpf('000.000.000-00', 'Guilherme Victor');
-console.log(pessoa);
+try {
+    pessoa.getCpf('111.111.111-11', 'Outra pessoa');
+}
+catch (err) {
+    console.error(err);
+}
