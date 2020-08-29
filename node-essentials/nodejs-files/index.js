@@ -3,9 +3,17 @@ const path = require('path');
 
 async function main() {
   const salesDir = path.join(__dirname, "stores")
+  const salesTotalsDir = path.join(__dirname, "salesTotals")
 
-  const salesFiles = await findSalesFiles(salesDir)
-  console.log(salesFiles)
+  try{
+    await fs.mkdir(salesTotalsDir);
+  } catch {
+    console.log(`${salesTotalsDir} already exists.`);
+  }
+
+  const salesFiles = await findSalesFiles(salesDir);
+  await fs.writeFile(path.join(salesTotalsDir, "total.txt"), String())
+
 }
 
 async function findSalesFiles(folderName) {
