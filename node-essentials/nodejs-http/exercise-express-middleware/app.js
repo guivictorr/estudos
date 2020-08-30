@@ -1,7 +1,18 @@
 const express = require("express");
 const app = express();
-const port = 3000;
 
+function isAuthorized(req,res, next) {
+  const auth = req.headers.authorization;
+  if (auth === 'secretpassword') {
+    next();
+  } else {
+    res.status(401);
+    res.send('Not permitted');
+  }
+}
+
+const port = 3000;
+app.use("/users", isAuthorized)
 app.get("/", (req, res) => res.send("Hello World!"));
 
 app.get("/users", (req, res) => {
