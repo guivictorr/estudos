@@ -11,4 +11,4 @@ objectA.keyA = 'Value';
 objectA.keyB = 'Other Value';
 objectA.keyC = 'Test';
 
-console.log(objectA.keyC);
+console.log(objectA);
