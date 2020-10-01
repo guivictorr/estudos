@@ -26,7 +26,7 @@ person = {
 };
 
 // Functions
-function sum(x: number, y: number): number {
+function sum(x: number, y: number) {
   return x + y;
 }
 
