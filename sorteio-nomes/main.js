@@ -44,7 +44,7 @@ function renderCheckBox(text){
 for(let name of names) {
   renderCheckBox(name)
 }
-display.innerHTML = names[Math.floor(Math.random()*names.length + 1)]
+display.innerHTML = names[Math.floor(Math.random() * names.length + 1)]
 
 button.addEventListener('click', event => {
 
@@ -53,7 +53,7 @@ button.addEventListener('click', event => {
     return
   }
 
-  display.innerHTML = names[Math.floor(Math.random()*names.length)]
+  display.innerHTML = names[Math.floor(Math.random() * names.length + 1)]
 })
 
 
