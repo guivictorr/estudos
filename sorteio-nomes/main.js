@@ -34,8 +34,11 @@ function renderCheckBox(text){
   label.htmlFor = "id";
   label.appendChild(document.createTextNode(text));
 
-  chkSection.appendChild(checkbox)
-  chkSection.appendChild(label);
+  const chkContainer = document.createElement('div')
+  chkContainer.appendChild(checkbox)
+  chkContainer.appendChild(label)
+
+  chkSection.appendChild(chkContainer)
 }
 
 for(let name of names) {
@@ -51,7 +54,6 @@ button.addEventListener('click', event => {
   }
 
   display.innerHTML = names[Math.floor(Math.random()*names.length)]
-  console.log(display.innerText)
 })
 
 

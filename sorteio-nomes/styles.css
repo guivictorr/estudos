@@ -92,19 +92,26 @@ input[type="checkbox"] {
   flex-wrap: wrap;
   height: 200px;
   font-size: 18px;
-  width: 630px;
+  width: 600px;
   color: #f5f5f5;
   font-weight: bold;
 }
 
-#names label {
+#names div label {
   margin: 5px 10px;
   animation: 1.5s opacity ease-in-out;
   background: #5E76BF;
   margin-left: 0;
   height: 25px;
   display:flex;
+  width: 70px;
   justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+}
+
+#names div {
+  display:flex;
   align-items: center;
 }
 
@@ -152,13 +159,15 @@ footer strong a:hover {
   }
 
   #names {
-    max-height: 380px;
-    width: 316px;
-    height: 500px;
-    flex-direction: column;
+    width: 315px;
+    flex-direction: row;
   }
 
   p {
     color: black;
+  }
+
+  footer {
+    margin-top: 100px;
   }
 }
