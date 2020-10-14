@@ -3,6 +3,8 @@ const button = document.querySelector('button')
 const display = document.querySelector('p')
 const names = ['Guilherme', 'Adélia', 'Ana Clara', 'Aryana', 'Beatriz Ferraz', 'Beatriz Viana', 'Clarisse', 'Daniela', 'Jane Flávia', 'Jeferson', 'Kaylane', 'Lucas', 'Mateus', 'Mayara', 'Pedro', 'Raquel', 'Sofia', 'Tiago', 'Erick', 'Davi', 'Kaio', 'João']
 
+names.sort()
+
 function renderCheckBox(text){
   const checkbox = document.createElement('input');
   checkbox.type = "checkbox";
