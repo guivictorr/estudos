@@ -42,6 +42,12 @@ for(let name of names) {
 display.innerHTML = names[Math.floor(Math.random()*names.length + 1)]
 
 button.addEventListener('click', event => {
+
+  if(names.length === 0) {
+    display.innerHTML = 'Selecione um nome'
+    return
+  }
+
   display.innerHTML = names[Math.floor(Math.random()*names.length)]
   console.log(display.innerText)
 })

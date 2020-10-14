@@ -1,11 +1,19 @@
-@keyframes scale {
+@keyframes slideFromTop {
   from {
-    transform: scale(0);
-  }
-  to {
-    transform: scale(1);
+    transform: translateY(-5vh);
+    opacity: 0;
   }
 }
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -49,7 +57,7 @@ main .display p {
   border-radius: 6px;
   text-align: center;
   width: 600px;
-  animation: 1s scale ease-in-out;
+  animation: 1s slideFromTop ease-in-out;
 }
 
 button {
@@ -62,10 +70,8 @@ button {
   font-size: 16px;
   cursor: pointer;
   width: 600px;
-  transition: opacity 0.2s ease;
   outline:none;
-  animation: 1.5s scale ease-in-out;
-
+  animation: 0.7s slideFromTop ease-in-out;
 }
 
 button:hover {
@@ -75,6 +81,8 @@ button:hover {
 input[type="checkbox"] {
   width: 25px;
   height: 25px;  
+  animation: 1.5s opacity ease-in-out;
+  cursor: pointer;
 }
 
 #names {
@@ -91,12 +99,35 @@ input[type="checkbox"] {
 
 #names label {
   margin: 5px 10px;
+  animation: 1.5s opacity ease-in-out;
   background: #5E76BF;
   margin-left: 0;
   height: 25px;
   display:flex;
   justify-content: center;
   align-items: center;
+}
+
+footer {
+  color: #f5f5f5;
+  font-size: 1.2rem;
+  display:flex;
+  align-items: center;
+}
+
+footer strong {
+  margin-left: 5px;
+}
+
+footer strong a {
+  text-decoration: dashed;
+  color: #F263A6;
+  font-size: 1.6rem;
+  transition: color 0.4s ease;
+}
+
+footer strong a:hover {
+  color: #f0b3cf;
 }
 
 @media (max-width: 515px) {
